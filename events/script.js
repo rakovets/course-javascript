@@ -11,16 +11,4 @@ function newRow() {
     tr.append(td3);
 };
 
-elem.addEventListener("click", newRow);
-
-// Подсветка выбранной ячейки таблицы
-table.onclick = function(event) {
-    let td = event.target.closest('td'); 
-  
-    if (!td) return;
-    if (elem) return; 
-  
-    td.innerHTML = "Hello";
-    // td.focus();
-    // highlight(td); 
-  };
+addTr.addEventListener("click", newRow);
