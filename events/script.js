@@ -12,3 +12,14 @@ function newRow() {
 };
 
 addTr.addEventListener("click", newRow);
+
+table.onclick = function(event) {
+    let td = event.target.closest('td');
+    if (!td) return; 
+
+    let input = document.createElement('input');
+    input.value = td.innerHTML;
+    td.innerHTML = '';
+    td.appendChild(input);
+    input.focus();
+};
