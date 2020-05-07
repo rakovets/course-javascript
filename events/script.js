@@ -18,8 +18,14 @@ table.onclick = function(event) {
     if (!td) return; 
 
     let input = document.createElement('input');
+    input.className = 'edit-input';
     input.value = td.innerHTML;
     td.innerHTML = '';
     td.appendChild(input);
     input.focus();
+
+    input.onblur = function() {
+        td.innerHTML = td.firstChild.value;
+        td.classList.remove('edit-input');
+    };
 };
