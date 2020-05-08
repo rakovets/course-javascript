@@ -1,0 +1,13 @@
+table {
+    border-color: black;
+    border-collapse: collapse;
+}
+
+td {
+    width: 200px;
+    height: 40px;
+}
+
+.tdf {
+    text-align: center;
+}
