@@ -24,8 +24,23 @@ table.onclick = function(event) {
     td.appendChild(input);
     input.focus();
 
-    input.onblur = function() {
+    input.onblur = closing;
+
+    function closing() {
         td.innerHTML = td.firstChild.value;
         td.classList.remove('edit-input');
     };
+
+    function buttonEnter() {
+        document.querySelector('input').addEventListener('keydown', function(e) {
+            if (e.keyCode === 13) {
+            closing();
+            console.log(this.value);
+            }
+        });
+    }
+    buttonEnter();
 };
+
+
+
