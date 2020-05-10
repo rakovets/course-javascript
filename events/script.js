@@ -13,6 +13,7 @@ function newRow() {
 
 addTr.addEventListener("click", newRow);
 
+// Tекстовый input с фокусом, редактирование данных
 table.onclick = function(event) {
     let td = event.target.closest('td');
     if (!td) return; 
@@ -31,6 +32,7 @@ table.onclick = function(event) {
         td.classList.remove('edit-input');
     };
 
+    // Событие по нажатию на клавишу Enter
     function buttonEnter() {
         document.querySelector('input').addEventListener('keydown', function(e) {
             if (e.keyCode === 13) {
