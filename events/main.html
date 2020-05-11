@@ -67,11 +67,7 @@
             selectedInput = input;
 
             input.onchange = function () {
-                let inputValue = input.value;
-                let pInput = document.createElement('p');
-                pInput.setAttribute('id', 'p');
-                pInput.innerHTML = inputValue;
-                td.prepend(pInput);
+                td.innerHTML = input.value;
             };
 
         }
