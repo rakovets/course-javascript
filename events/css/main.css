@@ -11,3 +11,11 @@ td {
 .tdf {
     text-align: center;
 }
+
+.highlight {
+    background-color: blue;
+}
+
+.selectedtd {
+    
+}
