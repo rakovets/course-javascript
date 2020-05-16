@@ -1,24 +1,27 @@
-let myDiv =document.getElementById("myDiv");
-myDiv.addEventListener("click", function (){
-let request = new XMLHttpRequest();
-request.open('GET','https://reqres.in/api/users?page=2',false);
+const myDiv = document.getElementById("myDiv");
+myDiv.addEventListener("click", () => {
+const request = new XMLHttpRequest();
+request.open('GET', 'https://reqres.in/api/users?page=2', false);
 request.send();
-if (request.status==200){
-    document.getElementById("answer").innerHTML=request.responseText;
+console.log(request.status);
+if (request.status == 200) {
+const response = JSON.parse(request.response);
+const result = response.data.map(user => {
+return {
+'firstName': user.first_name,
+'lastName': user.last_name
 }
-localStorage.setItem('UserInfo',result);
-localStorage.getItem('UserInfo');
+});
+result.forEach((user, index) => {
+myFunction(index,user);
+});
+}
+});
 
-var result = $.ajax({
-    url : 'https://reqres.in/api/users?page=2'
-})
-result.responseJSON.data.map(user => {
-    return {
-        'first.name': user.first_name,
-        'last.name' : user.last_name
-    }
-})
-})
-
-
-
+function myFunction(index,user) {
+    document.getElementById("nav-tab").innerHTML += "" + 
+     '<a class="nav-item nav-link" id="nav-contact-tab'+index+  '" data-toggle="tab" href="#nav-contact'+index+'" role="tab" aria-controls="nav-contact'+index+'" aria-selected="false">'+user.firstName+'</a>';
+  
+     document.getElementById("nav-tabContent").innerHTML += "" + 
+     '<div class="tab-pane fade" id="nav-contact'+index+'" role="tabpanel" aria-labelledby="nav-contact-tab'+index+'">'+user.lastName+'</div>';
+  }

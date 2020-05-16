@@ -1,15 +1,10 @@
-#myDiv{
-    padding-bottom: 50px;
-    padding-top: 50px;
-    margin: 50px;
-    height: 500px;
-    width: 1300px;
-    background-color: slategray;
+
+p{
+    margin: 10px;
 }
 
-
-
 button{
+    margin: 10px;
     border: 1px;
     color: slategray;
    }
