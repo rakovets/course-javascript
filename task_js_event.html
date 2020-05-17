@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <meta charset="utf-8">
+    <style>
+        table {
+         width: 50%;
+        }
+        td, th {
+            padding: 15px;
+        }
+       </style>
+
+<head>
+</head>
+
+<body>
+
+    <table border="1" id = "Table">
+        <tr>
+            <td height="20" onclick="setFocus(this)">text</td>
+            <td onclick="setFocus(this)">text</td>
+            <td onclick="setFocus(this)">text</td>
+        </tr>
+        <tr>
+            <td height="20" onclick="setFocus(this)">text</td>
+            <td onclick="setFocus(this)">text</td>
+            <td onclick="setFocus(this)">text</td>
+        </tr>
+        <tr>
+            <td height="20" onclick="setFocus(this)">text</td>
+            <td onclick="setFocus(this)">text</td>
+            <td onclick="setFocus(this)">text</td>
+        </tr>
+        <tr>
+            <th colspan="3"><input type="button" onclick="insRow()" id="elem" value="ADD ROW"></th>
+        </tr>
+    </table>
+    
+    <script>
+        function insRow() {
+            var x=document.getElementById('Table').insertRow(0);
+            var y=x.insertCell(0);
+            var z=x.insertCell(1);
+            var w=x.insertCell(2);
+            y.innerHTML="";
+            z.innerHTML="";
+            w.innerHTML="";
+        }
+
+        function clickk() {
+            alert('Добавление строки!');
+        }
+        elem.addEventListener("click", clickk);
+
+
+        function setFocus(text) {
+            if (text.firstChild.nodeType==3) {
+                name=text.innerHTML;
+                text.innerHTML='<input onblur="Blurr(this)" name="my">'
+                text.firstChild.value=name;
+                my.focus();
+            }
+        }
+
+        function Blurr(text) {
+            name = text.value;
+            text.parentNode.innerHTML= name;
+            text.onblur = null;
+        }
+
+    </script>
+
+</body>
+</html>
