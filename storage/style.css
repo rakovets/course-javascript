@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(190, 184, 184);
+    margin-top: 20px;
+    padding: 0px 20px 0px 20px;
+
+}
+.tabs { 
+    width: 100%; padding: 0px; margin: 0 auto; 
+    padding-top: 5px;
+}
+.tabs>input { 
+    display: none; 
+}
+.tabs>div {
+    display: none;
+    padding: 50px;
+    border: 1px solid #C0C0C0;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: large;
+    border: 1px solid rgb(140, 133, 148);
+}
+.tabs>label {
+    display: inline-block;
+    margin-right: 1px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    color: #666666;
+    border: 1px solid rgb(140, 133, 148);
+    background: #E0E0E0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.tabs>input:checked + label {
+    color: #000000;
+    border: 1px solid rgb(140, 133, 148);
+    border-bottom: 1px solid #FFFFFF;
+    background: #FFFFFF;
+}
+#tab_0:checked ~ #txt_0,
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4,
+#tab_5:checked ~ #txt_5 { 
+    display: block;
+    padding: 50px; 
+    margin: 0;
+}
+img {
+    width: 120px;
+    height: 120px;
+    float: left; 
+    margin-right: 40px; 
+    margin-bottom: 15px;
+}
+b, i {
+    text-align: center;
+    float: unset; 
+    padding-left: 10px;
+}
+input {
+    margin: 10px 10px 10px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(140, 133, 148);
+    background: #E0E0E0;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
