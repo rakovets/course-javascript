@@ -26,11 +26,10 @@ function submit() {
             let length = user.data.length;
             for (let i = 0; i < length; i++) {
                 let fullName = user.data[i].first_name + " " + user.data[i].last_name;
-                insert.insertAdjacentHTML('beforeend', '<br>');
-                insert.insertAdjacentHTML('beforeend',  fullName);
+                insert.insertAdjacentHTML('beforeend', '<br>' + fullName);
             }; 
         } catch (e) {
-            insert.insertAdjacentHTML('beforeend', 'ERROR - data not received');
+            insert.insertAdjacentHTML('beforeend', 'Data not received' + '<br>' + e.stack);
         }
     })
     ()
