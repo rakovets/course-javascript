@@ -30,49 +30,7 @@
         </tr>
     </table>
 
-    <script>
-
-        button.onclick = function () {
-            table.insertAdjacentHTML('afterbegin', '<tr><td></td><td></td><td></td></tr>');
-        };
-
-        let selectedTd;
-        let selectedInput;
-
-        table.onclick = function (event) {
-            let target = event.target;
-
-            if (target.tagName != 'TD') return;
-
-            if (target.classList == 'tdf') return;
-
-            changeTd(target);
-
-        };
-
-
-        function changeTd(td) {
-
-            if (selectedInput) {
-
-                selectedInput.remove();
-            }
-
-
-            let input = document.createElement('input');
-            input.setAttribute('id', 'input');
-            td.prepend(input);
-            input.focus();
-
-            selectedInput = input;
-
-            input.onchange = function () {
-                td.innerHTML = input.value;
-            };
-
-        }
-
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 
