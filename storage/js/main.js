@@ -1,7 +1,7 @@
 const result = document.querySelector('#result');
 
 function buttonAction() {
-    fetch('https://reqres.in/api/users?page=2')
+    fetch('https://reres.in/api/users?page=2')
         .then(res => res.json())
         .then(users => {
             users.data.forEach(user => {
@@ -10,5 +10,8 @@ function buttonAction() {
                 result.insertAdjacentHTML('beforeend', '<br />');
             });
         })
-        .catch(err => console.log(`Error: ${err}`));
+        .catch(err => {
+            result.insertAdjacentHTML('beforeend', err);
+            console.log(`Error: ${err}`);
+        });
 }
