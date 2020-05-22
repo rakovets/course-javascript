@@ -1,0 +1,52 @@
+html,
+body {
+    height: 100%;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    padding: 50px 0;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.tabs {
+    margin: 0px 0px 50px 0px;
+}
+
+.tabs__items {
+    display: flex;
+}
+
+.tabs__item {
+    flex: 0 1 20%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.tabs__block {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 25px;
+    display: none;
+}
+
+.button {
+    text-align: center;
+}
+
+.tabs__block:target {
+    display: block;
+}
